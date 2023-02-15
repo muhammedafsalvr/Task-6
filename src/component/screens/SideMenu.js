@@ -130,8 +130,9 @@ const AllName = styled(NavLink)`
         color: #000;
     }
     &.active {
-        color: #000;
+        color: #000000;
         font-weight: bolder;
+        
     }
     @media all and (max-width: 1280px) {
         font-size: 15px;
