@@ -1,15 +1,15 @@
-import './App.css';
-import styled from 'styled-components';
-import MainSection from './component/MainSection';
-import SideMenu from './component/screens/SideMenu';
-import Graph from './component/screens/Graph';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "./App.css";
+import styled from "styled-components";
+import MainSection from "./component/MainSection";
+import SideMenu from "./component/screens/SideMenu";
+import Graph from "./component/screens/Graph";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import CardsNotWorking from './component/PathFolder/CardsNotWorking';
-import SavingNoWorking from './component/PathFolder/SavingNoWorking';
-import TransationNotWorking from './component/PathFolder/TransationNotWorking';
-import SettingNotWorking from './component/PathFolder/SettingNotWorking';
-import SearchOops from './component/PathFolder/SearchOops';
+import CardsNotWorking from "./component/PathFolder/CardsNotWorking";
+import SavingNoWorking from "./component/PathFolder/SavingNoWorking";
+import TransationNotWorking from "./component/PathFolder/TransationNotWorking";
+import SettingNotWorking from "./component/PathFolder/SettingNotWorking";
+import SearchOops from "./component/PathFolder/SearchOops";
 
 function App() {
     return (
@@ -21,7 +21,7 @@ function App() {
                         element={
                             <Mark>
                                 <SideMenu />
-                                {/* <MainSection /> */}
+                                <MainSection />
                                 <Graph />
                             </Mark>
                         }
@@ -56,4 +56,4 @@ const Mark = styled.section`
 `;
 const Div = styled.div``;
 
-export default App;
+export default App;
