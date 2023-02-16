@@ -7,7 +7,7 @@ function CardsNotWorking() {
         <>
             <Container>
                 <SideMenu />
-                <CDM>Cards Not Working !!!</CDM>
+                <CDM>Cards Not Working !!</CDM>
             </Container>
         </>
     );
