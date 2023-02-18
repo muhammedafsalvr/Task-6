@@ -125,10 +125,10 @@ function MainSection() {
                 <TopContainer>
                     <HeadingStatic>Statistics</HeadingStatic>
                     <select>
-                        <option>March 2022</option>
-                        <option>April 2022</option>
-                        <option>May 2022</option>
-                        <option>June 2022</option>
+                        <option>March 2023</option>
+                        <option>April 2023</option>
+                        <option>May 2023</option>
+                        <option>June 2023</option>
                     </select>
                 </TopContainer>
                 <StaticItems>

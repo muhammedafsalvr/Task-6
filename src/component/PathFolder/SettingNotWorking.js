@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import SideMenu from "../screens/SideMenu";
+import Settings from "../../Assets/settings.jpg";
 
 function SettingNotWorking() {
     return (
         <>
             <Container>
-                <SideMenu />
-                <CDM> Setting Not Working !!!</CDM>
+                <SideMenu />{" "}
+                <CDM>
+                    <IMAGE src={Settings} alt="Settings" />
+                </CDM>
             </Container>
         </>
     );
@@ -16,12 +19,12 @@ function SettingNotWorking() {
 const Container = styled.div`
     display: flex;
 `;
-
-const CDM = styled.h1`
-    font-size: 40px;
-    color: red;
-    text-align: center;
-    font-weight: bold;
+const CDM = styled.div`
+    width: 75%;
+`;
+const IMAGE = styled.img`
+    display: block;
+    width: 100%;
 `;
 
 export default SettingNotWorking;
