@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const CDM = styled.h1`
-    font-size: 41px;
+    font-size: 40px;
     color: red;
     text-align: center;
     font-weight: bold;

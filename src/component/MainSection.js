@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Suns from "../Assets/sun.svg";
 import fire from "../Assets/fire.svg";
@@ -8,8 +8,10 @@ import GraphOne from "../Assets/graph1.png";
 import DowArrow from "../Assets/down-arrow-white.svg";
 import MAinLOgo from "../Assets/logo.svg";
 import Nav from "./screens/Nav";
+import Popup from "./screens/Popup";
 
 function MainSection() {
+    const [pop, setPop] = useState(false);
     return (
         <DashBoard>
             <HotSection>
@@ -54,7 +56,40 @@ function MainSection() {
                 <SecondDivision>
                     <FourthDivision>
                         <LeftSec>Saving</LeftSec>
-                        <RightSec>Total 5 Walets</RightSec>
+                        <RightSec
+                            onClick={() => {
+                                if (true === Boolean(pop)) {
+                                    setPop(false);
+                                } else {
+                                    setPop(true);
+                                }
+                            }}
+                        >
+                            Total 5 Walets
+                        </RightSec>
+                        {pop && (
+                            <>
+                                <div
+                                    onClick={() => {
+                                        setPop(false);
+                                    }}
+                                    style={{
+                                        position: "fixed",
+                                        right: "0%",
+                                        width: "100%",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        height: "100%",
+                                        zIndex: "10",
+                                        bottom: "0%",
+                                    }}
+                                ></div>
+                                <SliderBox>
+                                    <Popup />
+                                </SliderBox>
+                            </>
+                        )}
                     </FourthDivision>
                     <FifthDivision>
                         <BoxList>
@@ -472,6 +507,7 @@ const LeftSec = styled.h4`
 const RightSec = styled.h6`
     font-size: 20px;
     border-bottom: 1px solid grey;
+    cursor: pointer;
     color: #747474;
 `;
 
@@ -520,4 +556,21 @@ const SunImg = styled.img`
     width: 100%;
     display: block;
 `;
+
+const SliderBox = styled.div`
+    position: absolute;
+    z-index: 100;
+    right: 400px;
+    top: 35%;
+    @media all and (max-width: 1080px) {
+        right: 330px;
+    }
+    @media all and (max-width: 980px) {
+        right: 60px;
+    }
+    @media all and (max-width: 640px) {
+        right: 43px;
+    }
+`;
+
 export default MainSection;
