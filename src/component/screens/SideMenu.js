@@ -37,7 +37,7 @@ function SideMenu() {
                     </ListItems>
                     <ListItems>
                         <CreditImage src={Setting} alt="Setting" />
-                        <AllName to="/Setting">Setting</AllName>
+                        <AllName to="/Setting">Settings</AllName>
                     </ListItems>
                     <ListItems></ListItems>
                 </List>
