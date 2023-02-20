@@ -7,7 +7,7 @@ function SettingNotWorking() {
     return (
         <>
             <Container>
-                <SideMenu />{" "}
+                <SideMenu />
                 <CDM>
                     <IMAGE src={Settings} alt="Settings" />
                 </CDM>
